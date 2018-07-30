@@ -10,7 +10,8 @@ module('Acceptance | modal', function(hooks) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
-    await click(".open-modal-button")
+    await click(".dropdown-toggle");
+    await click(".open-modal-button");
     assert.ok(find(".modal-footer button.btn"), "it shows the modal");
 
     done();
